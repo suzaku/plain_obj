@@ -6,7 +6,7 @@ with open('README.rst') as f:
 
 setup(
     name='plain_obj',
-    version='0.1.1',
+    version='0.1.2',
     description='A faster alternative to namedtuple.',
     long_description=long_description,
     url='https://github.com/suzaku/plain_obj',
