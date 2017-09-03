@@ -13,7 +13,7 @@ setup(
     license='MIT',
     author='Satoru Logic',
     author_email='satorulogic@gmail.com',
-    py_modules=['plain_obj'],
+    packages=['plain_obj'],
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         'Development Status :: 3 - Alpha',
