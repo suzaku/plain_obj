@@ -73,3 +73,13 @@ def test_equality():
     assert cfg1 == cfg3
     assert cfg2 != cfg3
     assert cfg2 != cfg1
+
+
+def test_subclassing():
+    class Vector(plain_obj.new_type('Vector', 'x, y, z')):
+
+        def get_squared_size(self):
+            return self.x ** 2 + self.y ** 2 + self.z ** 2
+
+    vec = Vector(1, 2, 3)
+    assert vec.get_squared_size() == 14
