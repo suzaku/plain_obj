@@ -47,7 +47,7 @@ def make_constructor(fields):
     parameter_lists = ', '.join(fields)
     source = 'def __init__(self, %s):\n%s' % (parameter_lists, assignments)
     namespace = {}
-    exec(source, None, namespace)
+    exec(source, namespace)
     return namespace['__init__']
 
 
