@@ -11,7 +11,7 @@ class TestCreateNewType:
         assert len(Point.__slots__) == 3
 
     def test_can_create_with_comma_separated_string(self):
-        Point = plain_obj.new_type('Point', 'x,y,z')
+        Point = plain_obj.new_type('Point', 'x, y, z')
         assert isinstance(Point, type)
         assert len(Point.__slots__) == 3
 
