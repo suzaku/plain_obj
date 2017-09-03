@@ -38,11 +38,11 @@ class PlainBase(object):
 
 
 def make_constructor(fields):
-    assignments = '\n'.join(['    self.%s = %s' % (f, f) for f in fields])
+    assignments = '\n'.join(['    self.{0} = {0}'.format(f) for f in fields])
     parameter_lists = ', '.join(fields)
     source = 'def __init__(self, %s):\n%s' % (parameter_lists, assignments)
     namespace = {}
-    exec(source, {}, namespace)
+    exec(source, None, namespace)
     return namespace['__init__']
 
 
