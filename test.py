@@ -54,3 +54,10 @@ def test_to_dict():
         'skips_dist': True,
         'run_tests': False,
     }
+
+
+def test_unpacking():
+    Config = plain_obj.new_type('Config', 'skips_dist,run_tests')
+    skips_dist, run_tests = Config(True, False)
+    assert skips_dist
+    assert not run_tests
