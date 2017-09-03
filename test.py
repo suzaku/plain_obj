@@ -1,4 +1,5 @@
 import pytest
+import pickle
 
 import plain_obj
 
@@ -61,3 +62,14 @@ def test_unpacking():
     skips_dist, run_tests = Config(True, False)
     assert skips_dist
     assert not run_tests
+
+
+def test_equality():
+    Config = plain_obj.new_type('Config', 'skips_dist,run_tests')
+    cfg1 = Config(True, False)
+    cfg2 = Config(False, False)
+    cfg3 = Config(True, False)
+
+    assert cfg1 == cfg3
+    assert cfg2 != cfg3
+    assert cfg2 != cfg1

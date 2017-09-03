@@ -25,6 +25,11 @@ def new_type(type_name, field_names):
 
 class PlainBase(object):
 
+    def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return False
+        return all(i == j for i, j in zip(self, other))
+
     def __iter__(self):
         for name in self.__slots__:
             yield getattr(self, name)
