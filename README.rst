@@ -37,13 +37,6 @@ Unpacking
     is_debug, _, run_tests = config
 
 
-.. image:: https://app.codesponsor.io/embed/MY7qFCdB7bDgiBqdjtV9ASYi/suzaku/plain_obj.svg
-    :width: 888px
-    :height: 68px
-    :alt: Sponsor
-    :target: https://app.codesponsor.io/link/MY7qFCdB7bDgiBqdjtV9ASYi/suzaku/plain_obj
-
-
 When to use ``plain_obj`` instead of ``namedtuple``?
 ************************************************************
 
@@ -114,3 +107,10 @@ Comparing ``plain_obj`` with ``namedtuple`` in *Python 3.6*:
     148 ns ± 1.7 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
 As you can see, it's faster in all cases including *type creation*, *object instantiation* and *attribute access*.
+
+
+.. image:: https://app.codesponsor.io/embed/MY7qFCdB7bDgiBqdjtV9ASYi/suzaku/plain_obj.svg
+    :width: 888px
+    :height: 68px
+    :alt: Sponsor
+    :target: https://app.codesponsor.io/link/MY7qFCdB7bDgiBqdjtV9ASYi/suzaku/plain_obj
